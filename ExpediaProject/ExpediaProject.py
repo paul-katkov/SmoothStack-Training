@@ -146,8 +146,8 @@ def main():
     except SystemExit:
         logging.warning("Program terminated prematurely.")
         logging.info(">SESSION OVER<\n")
-    except:
-        logging.error("Unknown error was detected.")
+    except Exception as err:
+        logging.error(f"Error message: {err}")
         logging.warning("Program terminated prematurely.")
         logging.info(">SESSION OVER<\n")
     else:
