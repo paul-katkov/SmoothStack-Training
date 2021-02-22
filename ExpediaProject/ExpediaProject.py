@@ -1,7 +1,7 @@
 # This program will work with any .xlsx file that exists within its directory and contains a month name seperated from the rest of the string by
 # underscores ('_') and at least one 2- or a 4-digit sequence. If the file name contains a 2-digit sequence, the program will use it as 20xx. The program
 # will always use the first digit sequence it finds, so if the file has multiple digit sequences, please make sure it is the first one, which references
-# desired year.
+# desired year. Similarly, if the file name features multiple month names, the very first one will be used.
 
 # Certain information is assumed as known (e.g. the specific row/column index of the month list, the order of the promoter titles, etc.).
 
