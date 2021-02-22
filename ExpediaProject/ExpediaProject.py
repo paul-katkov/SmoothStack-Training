@@ -1,7 +1,7 @@
 # This program will work with any .xlsx file that exists within its directory and contains a month name seperated from the rest of the string by
 # underscores ('_') and at least one 2- or a 4-digit sequence. If the file name contains a 2-digit sequence, the program will use it as 20xx. The program
 # will always use the first digit sequence it finds, so if the file has multiple digit sequences, please make sure it is the first one, which references
-# desired year. Similarly, if the file name features multiple month names, the very first one will be used.
+# desired year. If the file name features multiple month names, the program will pick one randomly.
 
 # Certain information is assumed as known (e.g. the specific row/column index of the month list, the order of the promoter titles, etc.).
 
@@ -129,7 +129,7 @@ def ExtractDataIntoLog(month, year, summary_sheet, voc_sheet, summary_row_index,
 def main():
     print("Please enter the name of .xlsx file you wish to access:")
     print("1. The name must contain a month name (e.g. 'september', 'march') seperated by underscore(s) ('_').")
-    print("2. If two month names are detected, the program will utitlize the first instance as month.")
+    print("2. If two month names are detected, the program will pick one randomly.")
     print("3. It must also contain a 2- or 4- digit sequence, referencing desired year.")
     print("4. In case of multiple sequences of digits, the program will utilize the first one as year.")
     print("5. If a 2-digit sequence is utilized, it will use 2000 as base (e.g. '04' -> '2004').")
