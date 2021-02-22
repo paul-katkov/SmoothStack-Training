@@ -1,0 +1,86 @@
+2021-02-22 03:30:35,217 [INFO]: >SESSION START<
+2021-02-22 03:30:51,094 [INFO]: File [ expedia_report_monthly_march_2017.xlsx ] loaded.
+2021-02-22 03:30:51,094 [INFO]: Month and year detected in the file name (Mar-17).
+2021-02-22 03:30:51,095 [INFO]: Calls Offered: 25902
+2021-02-22 03:30:51,095 [INFO]: Abandon after 30s: 5.94%
+2021-02-22 03:30:51,095 [INFO]: FCR: 82.60%
+2021-02-22 03:30:51,096 [INFO]: DSAT: 15.70%
+2021-02-22 03:30:51,096 [INFO]: CSAT: 75.10%
+2021-02-22 03:30:51,096 [INFO]: Number of Promoters is greater than 200. (305) [GOOD]
+2021-02-22 03:30:51,096 [WARNING]: Number of Passives is less than 100. (98) [BAD]
+2021-02-22 03:30:51,096 [WARNING]: Number of Detractors is greater than 100. (136) [BAD]
+2021-02-22 03:30:51,097 [INFO]: >SESSION OVER<
+
+2021-02-22 03:31:46,611 [INFO]: >SESSION START<
+2021-02-22 03:32:04,817 [INFO]: File [ expedia_report_monthly_january_2018.xlsx ] loaded.
+2021-02-22 03:32:04,817 [INFO]: Month and year detected in the file name (Jan-18).
+2021-02-22 03:32:04,818 [INFO]: Calls Offered: 16915
+2021-02-22 03:32:04,818 [INFO]: Abandon after 30s: 2.32%
+2021-02-22 03:32:04,818 [INFO]: FCR: 86.50%
+2021-02-22 03:32:04,818 [INFO]: DSAT: 14.20%
+2021-02-22 03:32:04,818 [INFO]: CSAT: 78.30%
+2021-02-22 03:32:04,819 [INFO]: Number of Promoters is greater than 200. (256) [GOOD]
+2021-02-22 03:32:04,819 [WARNING]: Number of Passives is less than 100. (86) [BAD]
+2021-02-22 03:32:04,819 [INFO]: Number of Detractors is less than 100. (86) [GOOD]
+2021-02-22 03:32:04,819 [INFO]: >SESSION OVER<
+
+2021-02-22 03:32:39,303 [INFO]: >SESSION START<
+2021-02-22 03:32:53,632 [INFO]: File [ expedia_report_monthly_february_2018.xlsx ] loaded.
+2021-02-22 03:32:53,633 [INFO]: Month and year detected in the file name (Feb-18).
+2021-02-22 03:32:53,634 [INFO]: Calls Offered: 17342
+2021-02-22 03:32:53,634 [INFO]: Abandon after 30s: 1.35%
+2021-02-22 03:32:53,634 [INFO]: FCR: 88.60%
+2021-02-22 03:32:53,634 [INFO]: DSAT: 12.40%
+2021-02-22 03:32:53,634 [INFO]: CSAT: 78.00%
+2021-02-22 03:32:53,634 [INFO]: Number of Promoters is greater than 200. (235) [GOOD]
+2021-02-22 03:32:53,634 [WARNING]: Number of Passives is less than 100. (70) [BAD]
+2021-02-22 03:32:53,634 [INFO]: Number of Detractors is less than 100. (72) [GOOD]
+2021-02-22 03:32:53,635 [INFO]: >SESSION OVER<
+
+2021-02-22 03:34:02,647 [INFO]: >SESSION START<
+2021-02-22 03:34:07,387 [ERROR]: Requested Excel file [ june_16 ] was not found.
+2021-02-22 03:34:11,995 [ERROR]: Requested Excel file [ june_16.xlsx ] was not found.
+2021-02-22 03:34:19,548 [INFO]: File [ june_17.xlsx ] loaded.
+2021-02-22 03:34:19,548 [INFO]: Month and year detected in the file name (Jun-17).
+2021-02-22 03:34:19,549 [INFO]: Calls Offered: 26666
+2021-02-22 03:34:19,549 [INFO]: Abandon after 30s: 2.56%
+2021-02-22 03:34:19,549 [INFO]: FCR: 83.10%
+2021-02-22 03:34:19,549 [INFO]: DSAT: 14.80%
+2021-02-22 03:34:19,549 [INFO]: CSAT: 73.60%
+2021-02-22 03:34:19,549 [INFO]: Number of Promoters is greater than 200. (311) [GOOD]
+2021-02-22 03:34:19,550 [INFO]: Number of Passives is greater than 100. (107) [GOOD]
+2021-02-22 03:34:19,550 [WARNING]: Number of Detractors is greater than 100. (162) [BAD]
+2021-02-22 03:34:19,550 [INFO]: >SESSION OVER<
+
+2021-02-22 03:35:08,699 [INFO]: >SESSION START<
+2021-02-22 03:35:21,701 [INFO]: File [ 2017_promoter_stats_august.xlsx ] loaded.
+2021-02-22 03:35:21,701 [INFO]: Month and year detected in the file name (Aug-17).
+2021-02-22 03:35:21,702 [INFO]: Calls Offered: 27037
+2021-02-22 03:35:21,702 [INFO]: Abandon after 30s: 10.20%
+2021-02-22 03:35:21,702 [INFO]: FCR: 82.40%
+2021-02-22 03:35:21,702 [INFO]: DSAT: 15.60%
+2021-02-22 03:35:21,702 [INFO]: CSAT: 75.50%
+2021-02-22 03:35:21,702 [INFO]: Number of Promoters is greater than 200. (358) [GOOD]
+2021-02-22 03:35:21,702 [INFO]: Number of Passives is greater than 100. (145) [GOOD]
+2021-02-22 03:35:21,703 [WARNING]: Number of Detractors is greater than 100. (178) [BAD]
+2021-02-22 03:35:21,703 [INFO]: >SESSION OVER<
+
+2021-02-22 03:36:05,782 [INFO]: >SESSION START<
+2021-02-22 03:36:16,639 [INFO]: File [ 2017.xlsx ] loaded.
+2021-02-22 03:36:16,639 [ERROR]: Month was not detected in the file name.
+2021-02-22 03:36:16,639 [WARNING]: Program terminated prematurely.
+2021-02-22 03:36:16,639 [INFO]: >SESSION OVER<
+
+2021-02-22 03:36:29,697 [INFO]: >SESSION START<
+2021-02-22 03:36:37,732 [INFO]: File [ february_19.xlsx ] loaded.
+2021-02-22 03:36:37,732 [INFO]: Month and year detected in the file name (Feb-19).
+2021-02-22 03:36:37,733 [ERROR]: Requested month and/or year [2/2019] were not found in the 'Summary Rolling MoM'.
+2021-02-22 03:36:37,733 [WARNING]: Program terminated prematurely.
+2021-02-22 03:36:37,733 [INFO]: >SESSION OVER<
+
+2021-02-22 03:37:10,389 [INFO]: >SESSION START<
+2021-02-22 03:37:16,896 [INFO]: File [ october.xlsx ] loaded.
+2021-02-22 03:37:16,896 [ERROR]: Year was not detected in the file name.
+2021-02-22 03:37:16,896 [WARNING]: Program terminated prematurely.
+2021-02-22 03:37:16,896 [INFO]: >SESSION OVER<
+
