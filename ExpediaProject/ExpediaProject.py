@@ -26,6 +26,10 @@ data_offset = 2
 data_end_index = data_offset + 11
 # Assumes a 12-month window (second sheet technically contains more than 12 entries, but only 12 different dates match between both sheets)
 
+month_col_index = 1
+month_row_index = 1
+# By default, the program expects the month window to be in the first row/column of the Summary/VOC sheets, respectively.
+
 # Config End
 
 def FindYear(name):
@@ -87,12 +91,12 @@ def SheetConfig(excel, month, year):
     summary_row_index = 0
     voc_col_index = 0
 
-    for month_row in summary_sheet.iter_cols(1, 1, data_offset, data_end_index):
+    for month_row in summary_sheet.iter_cols(month_col_index, month_col_index, data_offset, data_end_index):
         for date_cell in month_row:
             if date_cell.value.month == month and date_cell.value.year == year:
                 summary_row_index = date_cell.row
 
-    for month_col in voc_sheet.iter_rows(1, 1, data_offset, data_end_index):
+    for month_col in voc_sheet.iter_rows(month_row_index, month_row_index, data_offset, data_end_index):
         for date_cell in month_col:
             if date_cell.value.month == month and date_cell.value.year == year:
                 voc_col_index = date_cell.column
@@ -107,9 +111,9 @@ def SheetConfig(excel, month, year):
         return summary_sheet, voc_sheet, summary_row_index, voc_col_index
 
 def ExtractDataIntoLog(month, year, summary_sheet, voc_sheet, summary_row_index, voc_col_index):
-    logging.info(f"{summary_sheet.cell(1, 2).value.strip()}: {int(summary_sheet.cell(summary_row_index, 2).value)}")
+    logging.info(f"{summary_sheet.cell(month_col_index, 2).value.strip()}: {int(summary_sheet.cell(summary_row_index, 2).value)}")
     for i in range(3, 7):
-        logging.info(f"{summary_sheet.cell(1, i).value.strip()}: {'{:.2f}'.format(summary_sheet.cell(summary_row_index, i).value * 100)}%")
+        logging.info(f"{summary_sheet.cell(month_col_index, i).value.strip()}: {'{:.2f}'.format(summary_sheet.cell(summary_row_index, i).value * 100)}%")
     for u in range(4, 9, 2):
         promoter_group = voc_sheet.cell(u, 1).value.split()[0]
         amount = int(voc_sheet.cell(u, voc_col_index).value)
