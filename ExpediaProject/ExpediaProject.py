@@ -3,7 +3,7 @@
 # will always use the first digit sequence it finds, so if the file has multiple digit sequences, please make sure it is the first one, which references
 # desired year. If the file name features multiple month names, the program will pick one randomly.
 
-# Certain information is assumed as known (e.g. the specific row/column index of the month list, the order of the promoter titles, etc.).
+# Certain information is assumed as known (e.g. the order of the promoter titles, file format, etc.).
 
 # It will work, however, even if the month list is out of chronological order (as long as the format is datetime and the list contains the date referenced
 # in the file name). The length of the month list can also be configured via {data_offset} and {data_end_index} found below. Thank you!
