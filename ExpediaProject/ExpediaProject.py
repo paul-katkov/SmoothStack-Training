@@ -61,7 +61,7 @@ def GetMonthAndYear(name):
     try:
         month = months.index(set(name[:-5].split("_")).intersection(months).pop())
         year = FindYear(name)
-    except IndexError:
+    except KeyError:
         logging.error("Month was not detected in the file name.")
         sys.exit()
     except SystemExit:
