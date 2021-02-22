@@ -157,8 +157,8 @@ def main():
     else:
         ExtractDataIntoLog(month, year, summary_sheet, voc_sheet, summary_row_index, voc_col_index)
         logging.info(">SESSION OVER<\n")
-                     
-    excel.close()
+    finally:             
+        excel.close()
 
 if __name__ == '__main__':
     main()
