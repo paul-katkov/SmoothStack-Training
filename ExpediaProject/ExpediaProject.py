@@ -59,7 +59,7 @@ def Load_Workbook(name):
 
 def GetMonthAndYear(name):
     try:
-        month = months.index(list(set(name[:-5].split("_")).intersection(months))[0])
+        month = months.index(set(name[:-5].split("_")).intersection(months).pop())
         year = FindYear(name)
     except IndexError:
         logging.error("Month was not detected in the file name.")
@@ -129,9 +129,10 @@ def ExtractDataIntoLog(month, year, summary_sheet, voc_sheet, summary_row_index,
 def main():
     print("Please enter the name of .xlsx file you wish to access:")
     print("1. The name must contain a month name (e.g. 'september', 'march') seperated by underscore(s) ('_').")
-    print("2. It must also contain a 2- or 4- digit sequence, referencing desired year.")
-    print("3. In case of multiple sequences of digits, the program will utilize the first one as year.")
-    print("4. If a 2-digit sequence is utilized, it will use 2000 as base (e.g. '04' -> '2004').")
+    print("2. If two month names are detected, the program will utitlize the first instance as month.")
+    print("3. It must also contain a 2- or 4- digit sequence, referencing desired year.")
+    print("4. In case of multiple sequences of digits, the program will utilize the first one as year.")
+    print("5. If a 2-digit sequence is utilized, it will use 2000 as base (e.g. '04' -> '2004').")
     print("Lastly, please include .xlsx extension at the end of the file name.")
     print("EXAMPLES: expedia_report_monthly_january_2018.xlsx, june_17.xlsx, 2017_promoter_stats_august.xlsx\n")
 
