@@ -28,7 +28,7 @@ data_end_index = data_offset + 11
 
 # Config End
 
-def FindYear(name): # Did not want to import re library just search for a 2/4-digit sequence once
+def FindYear(name):
     year = ""
 
     for char in name:
@@ -48,8 +48,6 @@ def Load_Workbook(name):
     while True:
         try:
             excel = openpyxl.load_workbook(name)
-        except TypeError:
-            continue
         except:
             print("ERROR: Excel file was not found. Try again:")
             logging.error(f"Requested Excel file [ {name} ] was not found.")
