@@ -19,7 +19,7 @@ from email.mime.text import MIMEText
 
 # CONFIG:
 
-lg.basicConfig(filename = "report.log", filemode = "w", format = "%(asctime)s [%(levelname)s]: %(message)s", datefmt = "%B %d, %Y %H:%M", level = lg.INFO)
+lg.basicConfig(filename = "NYL_FieldAgents/report.log", filemode = "w", format = "%(asctime)s [%(levelname)s]: %(message)s", datefmt = "%B %d, %Y %H:%M", level = lg.INFO)
 
 max_year = 2021 # Current year
 min_year = 1845 # The year New York Life was founded
@@ -569,9 +569,9 @@ def main():
 
     smtp_server = "smtp.gmail.com"
     port = 587
-    sender_email = "paul.katkov@smoothstack.com"
-    receiver_email = "paul.katkov@smoothstack.com"
-    password = input("Type your password and press enter: ")
+    sender_email = "pavliichek@gmail.com"
+    receiver_email = "pavliichek@gmail.com"
+    password = input("Password: ")
     subject = "Report"
     body = ""
 
@@ -590,15 +590,22 @@ def main():
 
     encoders.encode_base64(part)
 
+    part.add_header(
+        "Content-Disposition",
+        f"attachment; filename= {filename}",
+    )
+
     message.attach(part)
     text = message.as_string()
 
     context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+    with smtplib.SMTP("smtp.gmail.com", 587) as server:
+        server.ehlo()
+        server.starttls(context=context)
+        server.ehlo()
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, text)
 
-    filename.close()
     server.quit() 
 
 if __name__ == '__main__':
