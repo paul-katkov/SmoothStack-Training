@@ -541,10 +541,10 @@ def process_file(file):
                     Y = Y.lstrip()
                     break
         
-        file_df.plot(kind = data_visual_10, x = X, y = Y)
+        df10.plot(kind = data_visual_10, x = X, y = Y)
 
     else:
-        file_df.plot(kind = data_visual_10)
+        df10.plot(kind = data_visual_10)
 
     plt.show()
 
@@ -567,8 +567,6 @@ def main():
 
     lg.info(">SESSION OVER<")
 
-    smtp_server = "smtp.gmail.com"
-    port = 587
     sender_email = "pavliichek@gmail.com"
     receiver_email = "pavliichek@gmail.com"
     password = input("Password: ")
@@ -600,11 +598,14 @@ def main():
 
     context = ssl.create_default_context()
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
-        server.ehlo()
-        server.starttls(context=context)
-        server.ehlo()
-        server.login(sender_email, password)
-        server.sendmail(sender_email, receiver_email, text)
+        try:
+            server.ehlo()
+            server.starttls(context=context)
+            server.ehlo()
+            server.login(sender_email, password)
+            server.sendmail(sender_email, receiver_email, text)
+        except:
+            lg.error("Could not connect to server.")
 
     server.quit() 
 
