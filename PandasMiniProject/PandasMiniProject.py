@@ -366,7 +366,7 @@ def get_valid_file():
             lg.error(f"Unknown error encountered: {ex}")
             return
 
-    file_index = -1
+    file_index = 9999999
 
     nyl = open(file = "NYL.lst", mode = "a+")
     nyl.seek(0)
